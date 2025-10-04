@@ -1,13 +1,11 @@
-<script setup lang="ts">
-import useNavscoll from './hooks/useNavscoll';
-const { tiaoZ } = useNavscoll('.nav');
-</script>
+
 
 <template>
   <div class="nav" >
     <a href=""  class="nF" @click="tiaoZ($event, 'zhuYe') ">
       <el-icon :size="20">
       <User /></el-icon>  主页</a>
+
     <div class="cNav">
       <a href="" @click="tiaoZ($event, 'jingLi')">个人经历</a>
       <a href=""  @click="tiaoZ($event, 'xiangMu')">个人项目</a>
@@ -15,10 +13,9 @@ const { tiaoZ } = useNavscoll('.nav');
       <a href="" @click="tiaoZ($event, 'lianXi')">联系方式</a>
     </div>
   </div>    
-  <WordChu />
   <!-- //主页 -->
   <div id="zhuYe">
-
+    <Word/>
   </div>
   <!-- 个人经历 -->
   <div id="jingLi"></div>
@@ -31,6 +28,12 @@ const { tiaoZ } = useNavscoll('.nav');
 
 
 </template>
+
+<script setup lang="ts">
+import Word from './components/Word.vue';
+import useNavscoll from './hooks/useNavscoll';
+const { tiaoZ } = useNavscoll('.nav');
+</script>
 
 <style scoped>
 .nav .cNav {
@@ -70,5 +73,8 @@ const { tiaoZ } = useNavscoll('.nav');
   margin-top: 20px;
 
   background-color: #f0f0f0;
+}
+#zhuYe{
+  margin-top: 100px;
 }
 </style>
