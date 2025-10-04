@@ -17,8 +17,7 @@
         <Sunrise/> 
       </el-icon>
       <el-switch v-model="switchValue"     
-      size=20px
-      style="--el-switch-on-color: #ffffffa8; --el-switch-off-color: black"
+      style="--el-switch-on-color: #ffffffa8; --el-switch-off-color: black ;--el-switch-height: 24px"
       @change="handleSwitchChange"
         />
         <el-icon :size="20">

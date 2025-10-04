@@ -25,7 +25,6 @@ export default function () {
     if (isDark) {
       html.classList.add('dark')
       nav.classList.add('dark')
-      console.log(nav);
       
       localStorage.setItem('theme', 'dark')
     } else {
