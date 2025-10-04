@@ -27,7 +27,9 @@
   </div>    
   <!-- //主页 -->
   <div id="zhuYe">
-    <Word/>
+    <Word :text="'aojdoaijasoidjoaisd'"
+    fsize="30px"
+    />
   </div>
   <!-- 个人经历 -->
   <div id="jingLi"></div>
