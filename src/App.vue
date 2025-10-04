@@ -3,7 +3,7 @@
 <template>
   <div class="nav" >
     <a href=""  class="nF" @click="tiaoZ($event, 'zhuYe') ">
-      <el-icon :size="20">
+      <el-icon :size="22">
       <User /></el-icon>  主页</a>
 
     <div class="cNav">
@@ -11,6 +11,19 @@
       <a href=""  @click="tiaoZ($event, 'xiangMu')">个人项目</a>
       <a href="" @click="tiaoZ($event, 'jiNeng')">个人技能</a>
       <a href="" @click="tiaoZ($event, 'lianXi')">联系方式</a>
+    </div>
+    <div id="navR">
+      <el-icon :size="20">
+        <Sunrise/> 
+      </el-icon>
+      <el-switch v-model="switchValue"     
+      size=20px
+      style="--el-switch-on-color: #ffffffa8; --el-switch-off-color: black"
+      @change="handleSwitchChange"
+        />
+        <el-icon :size="20">
+        <MoonNight/> 
+      </el-icon>
     </div>
   </div>    
   <!-- //主页 -->
@@ -30,12 +43,28 @@
 </template>
 
 <script setup lang="ts">
+import useTheme from './hooks/useTheme';
 import Word from './components/Word.vue';
 import useNavscoll from './hooks/useNavscoll';
+import { ref } from 'vue'
+import { Sunrise, MoonNight } from '@element-plus/icons-vue'
+
+
 const { tiaoZ } = useNavscoll('.nav');
+
+const { switchValue, handleSwitchChange } = useTheme()
+
 </script>
 
 <style scoped>
+.nav .el-icon{
+  position: relative;
+  top: 2px;
+}
+#navR .el-icon{
+  position: relative;
+  top: 8px;
+}
 .nav .cNav {
   display: flex;
   gap: 15px;
@@ -45,12 +74,18 @@ const { tiaoZ } = useNavscoll('.nav');
   position: fixed;
   left: 0;
 }
+.nav #navR {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  right: 0;
+  margin-right: 40px;
+}
 
 .nav a {
   margin: 0 15px;
   line-height: 50px;
   text-decoration: none;
-  color: black;
   font-size: 24px;
 }
 
@@ -63,7 +98,6 @@ const { tiaoZ } = useNavscoll('.nav');
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: white;
   height: 100px;  
 }
 
@@ -71,7 +105,6 @@ const { tiaoZ } = useNavscoll('.nav');
   width: 100%;
   height: 600px;
   margin-top: 20px;
-
   background-color: #f0f0f0;
 }
 #zhuYe{
