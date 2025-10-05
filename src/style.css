@@ -45,7 +45,7 @@ a {
   color: #ffffff; /* 白色文字 */
 }
 .zRi.dark{
-  background-image: url(./assets/imgNight.png);
+  background-image: url(./assets/image1.png);
   transition: background-color 0.3s ease; /* 平滑过渡 */
 
 }

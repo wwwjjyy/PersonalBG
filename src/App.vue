@@ -82,10 +82,10 @@ const { switchValue, handleSwitchChange } = useTheme()
 }
 .zRi {
   width: 40%;
-  height: 80%;
+  height: 95%;
   border-radius: 10px;
   flex-grow: 1;
-  /* background-image: url('@/assets/image.png'); */
+  background-image: url('@/assets/image.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
