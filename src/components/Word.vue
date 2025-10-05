@@ -1,7 +1,7 @@
 <template>
   <div class="word-container">
     <span v-for="(char, index) in textArray" :key="index" class="word-char"
-      :style="{ animationDelay: `${index * 0.2}s`,fontSize: fsize }">
+      :style="{ animationDelay: `${index * 0.1}s` }">
       {{ char }}
     </span>
   </div>
@@ -14,7 +14,6 @@ const textArray = ref<string[]>([]);
 
 const props = defineProps<{
   text: string;
-  fsize: string;
 }>();
 onMounted(() => {
   textArray.value = props.text.split("");
@@ -24,7 +23,8 @@ onMounted(() => {
 <style scoped>
 .word-container {
   display: flex;
-  color: black;
+  flex-wrap: wrap; /* 超出宽度时自动换行（核心修复） */
+
 }
 
 .word-char {

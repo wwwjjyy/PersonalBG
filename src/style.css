@@ -9,7 +9,7 @@
 
 /* 夜间模式（通过 .dark 类名切换） */
 :root.dark {
-  --bg-color: #1a1a1a;
+  --bg-color: #000;
   --text-color: #f5f5f5;
   --card-bg: #2c2c2c;
   --border-color: #3a3a3a;
@@ -32,4 +32,20 @@ body {
 
 a {
   color: var(--primary-color);
+}
+.nav {
+  background-color: #ffffff; /* 白色背景（示例） */
+  color: #333333; /* 深色文字 */
+  transition: background-color 0.3s ease; /* 平滑过渡 */
+}
+
+/* 深色模式的 .nav 样式（关键！） */
+.nav.dark {
+  background-color: #1a1a1a; /* 深色背景（示例） */
+  color: #ffffff; /* 白色文字 */
+}
+.zRi.dark{
+  background-image: url(./assets/imgNight.png);
+  transition: background-color 0.3s ease; /* 平滑过渡 */
+
 }

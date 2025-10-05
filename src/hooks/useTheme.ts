@@ -22,13 +22,19 @@ export default function () {
   const updateTheme = (isDark: boolean) => {
     const html = document.documentElement
     const nav=document.querySelector('.nav') as HTMLElement;
+    const zy=document.querySelector('.zRi') as HTMLElement;
+    console.log(zy);
+    
     if (isDark) {
       html.classList.add('dark')
-      nav.classList.add('dark')
+      nav?.classList.add('dark');
+      zy?.classList.add('dark');
       
       localStorage.setItem('theme', 'dark')
     } else {
       html.classList.remove('dark')
+      nav?.classList.remove('dark');
+      zy?.classList.remove('dark');
       localStorage.setItem('theme', 'light')
     }
   }
