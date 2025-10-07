@@ -39,7 +39,7 @@
   </div>
   <!-- 个人经历 -->
   <div id="jingLi">
-    <h1>个人经历</h1>
+    <PassHis/>
   </div>
   <!-- 个人项目 -->
   <div id="xiangMu"></div>
@@ -56,7 +56,7 @@ import useTheme from './hooks/useTheme';
 import Word from './components/Word.vue';
 import useNavscoll from './hooks/useNavscoll';
 import { Sunrise, MoonNight } from '@element-plus/icons-vue'
-import MovDiv from './components/MovDiv.vue';
+import PassHis from './components/PassHis.vue';
 import MovDiv2 from './components/MovDiv2.vue';
 
 

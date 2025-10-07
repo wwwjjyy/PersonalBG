@@ -12,6 +12,7 @@ declare module 'vue' {
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     MovDiv: typeof import('./src/components/MovDiv.vue')['default']
     MovDiv2: typeof import('./src/components/MovDiv2.vue')['default']
+    PassHis: typeof import('./src/components/PassHis.vue')['default']
     Word: typeof import('./src/components/Word.vue')['default']
   }
 }
