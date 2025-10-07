@@ -19,27 +19,58 @@
                 </ul>
             </div>
         </div>
-        <div class="pj1">
-            <div></div>
-            <div></div>
+
+        <!-- 项目一：文字在左，卡片在右 -->
+        <div class="pj1 project-item">
+            <div class="project-info">
+                <h2>项目标题一</h2>
+                <p class="description">
+                    这里是关于这个项目的详细介绍。前端使用 React + React Router + CSS 实现动画和交互效果；后端使用 Node.js + Express 处理图片上传功能，利用 IndexedDB 和 LocalStorage实现数据持久化。
+                </p>
+                <div class="links">
+                    <p>项目地址: <a href="https://github.com/xxx" target="_blank">https://github.com/xxx</a></p>
+                    <p>访问地址: <a href="https://www.xxx.com" target="_blank">https://www.xxx.com</a></p>
+                </div>
+            </div>
+            <div class="project-card">
+                <Cardd />
+            </div>
         </div>
-        <div class="pj2">
-            <div></div>
-            <div></div>
+
+        <!-- 项目二：卡片在左，文字在右 (对应图片中的“支付系统”) -->
+        <div class="pj2 project-item">
+            <div class="project-card">
+                <Cardd />
+            </div>
+            <div class="project-info">
+                <h2>支付系统</h2>
+                <p class="description">
+                    提高支付系统安全和支付转化率低的问题。这是一个示例描述，您可以根据实际情况进行修改和填充。
+                </p>
+                <div class="links">
+                    <p>项目地址: <a href="https://github.com/xxx" target="_blank">https://github.com/xxx</a></p>
+                    <p>访问地址: <span>---</span></p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script setup lang='ts'>
-
+import Cardd from './Cardd.vue';
 </script>
 
 <style>
+/* ... 您之前的 .ct, .uni 等样式保持不变 ... */
+.ct {
+    padding: 150px 0; /* 调整了上下间距，使其不那么空旷 */
+}
+
 .ct>h1 {
     font-weight: 540;
     font-size: 3rem;
     text-align: center;
-    margin: 100px 0 50px;
+    margin-bottom: 80px; /* 增加标题和下方内容的间距 */
 }
 
 .uni {
@@ -47,16 +78,23 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0 auto;
-    width: 80%; /* 可根据实际情况调整宽度 */
+    padding-top: 30px;
+    width: 80%;
+    /* height: 300px; - 移除固定高度，让内容自适应 */
+    margin-bottom: 100px; /* 增加与项目部分的间距 */
 }
 
 .uni-left {
-    flex: 0 0 50%; /* 左侧占比，可调整 */
+    flex: 0 0 50%;
 }
 
-.uni-left p{
+.uni-left p {
     font-size: 20px;
+}
 
+.uni-left h2 {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .uni-info {
@@ -65,16 +103,13 @@
 }
 
 .imgUn {
-    position: relative;
-    top:20px;
-    width: 40px; /* 图片大小可调整 */
-    height: 40px;
+    width: 34px;
+    height: 34px;
     margin-right: 10px;
 }
 
 .uni-right {
-    flex: 0 0 50%; /* 右侧占比，可调整 */
-    left: 0;
+    flex: 0 0 50%;
     font-size: 20px;
 }
 
@@ -88,10 +123,50 @@
     padding-left: 20px;
 }
 
-.pj1,
-.pj2 {
+/* --- 以下是为项目布局新增和修改的样式 --- */
+
+/* 通用项目容器样式 */
+.project-item {
     display: flex;
-    margin: 20px auto;
-    width: 80%; 
+    align-items: center;  /* 核心：让左右两边的内容垂直居中对齐 */
+    gap: 60px;            /* 核心：在卡片和文字之间创建间隙 */
+    margin: 120px auto;   /* 增加每个项目之间的垂直间距 */
+    width: 80%;
+}
+
+/* 项目的左右两个子容器（卡片和信息） */
+.project-item > div {
+    flex: 1; /* 让两个子容器平分宽度 */
+}
+
+/* 项目信息部分的样式 */
+.project-info h2 {
+    font-size: 2.5rem; /* 字体更大，作为焦点 */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-info .description {
+    font-size: 1.1rem;
+    line-height: 1.7;   /* 增加行高，更易读 */
+    color: #888;       /* 描述文字颜色稍浅 */
+    margin-bottom: 30px;
+}
+
+.project-info .links p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.project-info .links a {
+    color: #4a90e2; /* 链接颜色 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-info .links a:hover {
+    color: #2a6db9;
+    text-decoration: underline;
 }
 </style>

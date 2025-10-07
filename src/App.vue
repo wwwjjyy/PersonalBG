@@ -115,7 +115,11 @@ const { switchValue, handleSwitchChange } = useTheme()
 #tuPian {
   padding: 50px 10px;
   width: 90%;
-  height: 125vh;
+  height: 145vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 h1 {
   font-weight: 540;

@@ -58,18 +58,18 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;  
+  gap: 15px;  
   align-items: center;
   justify-content: center;
-  height: 110vh;
-  padding: 10px 10px;
+  height: 140vh;
+  padding: 10px 1%;
   overflow: hidden;
 }
 
 /* 每行固定 5 个：5 列，4 个缝隙 */
 .box {
-  width: calc((95% - 4 *12px) / 5);
-  height: 49%;
+  width: calc((99% - 4 *15px) / 5);
+  height: 48%;
   color: white;
   border-radius: 20px;
   opacity: 0;

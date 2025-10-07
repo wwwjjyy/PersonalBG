@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
+import tailwindcss from '@tailwindcss/vite'
 //element
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -14,9 +15,12 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    tailwindcss(),
+    
     // ...
     AutoImport({
       resolvers: [ElementPlusResolver()],
+      
     }),
     Components({
       resolvers: [ElementPlusResolver()],
@@ -26,5 +30,7 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
+    
   },
+
 })

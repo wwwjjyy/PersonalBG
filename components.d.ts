@@ -8,6 +8,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    CardBody: typeof import('./src/components/ui/card-3d/CardBody.vue')['default']
+    CardContainer: typeof import('./src/components/ui/card-3d/CardContainer.vue')['default']
+    Cardd: typeof import('./src/components/Cardd.vue')['default']
+    CardItem: typeof import('./src/components/ui/card-3d/CardItem.vue')['default']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     MovDiv: typeof import('./src/components/MovDiv.vue')['default']
