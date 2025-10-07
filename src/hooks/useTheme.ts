@@ -22,18 +22,24 @@ export default function () {
   const updateTheme = (isDark: boolean) => {
     const html = document.documentElement
     const nav=document.querySelector('.nav') as HTMLElement;
-    const zy=document.querySelector('.zRi') as HTMLElement;
-    console.log(zy);
+    const zR=document.querySelector('.zRi') as HTMLElement;
+    const zL=document.querySelector('.zLe') as HTMLElement;
+    const zy=document.querySelector('#zhuYe') as HTMLElement;
     
     if (isDark) {
       html.classList.add('dark')
       nav?.classList.add('dark');
+      zR?.classList.add('dark');
+      zL?.classList.add('dark');
       zy?.classList.add('dark');
+      
       
       localStorage.setItem('theme', 'dark')
     } else {
       html.classList.remove('dark')
       nav?.classList.remove('dark');
+      zR?.classList.remove('dark');
+      zL?.classList.remove('dark');
       zy?.classList.remove('dark');
       localStorage.setItem('theme', 'light')
     }

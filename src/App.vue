@@ -33,8 +33,14 @@
     <div class="zRi"></div>
 
   </div>
+  <div id="tuPian">    
+    <h1>瞬间</h1>
+    <MovDiv2/>
+  </div>
   <!-- 个人经历 -->
-  <div id="jingLi"></div>
+  <div id="jingLi">
+    <h1>个人经历</h1>
+  </div>
   <!-- 个人项目 -->
   <div id="xiangMu"></div>
   <!-- 个人技能 -->
@@ -50,6 +56,8 @@ import useTheme from './hooks/useTheme';
 import Word from './components/Word.vue';
 import useNavscoll from './hooks/useNavscoll';
 import { Sunrise, MoonNight } from '@element-plus/icons-vue'
+import MovDiv from './components/MovDiv.vue';
+import MovDiv2 from './components/MovDiv2.vue';
 
 
 const { tiaoZ } = useNavscoll('.nav');
@@ -59,6 +67,7 @@ const { switchValue, handleSwitchChange } = useTheme()
 </script>
 
 <style scoped>
+
 .zLe {
   display: flex;
   flex-direction: column;
@@ -85,25 +94,35 @@ const { switchValue, handleSwitchChange } = useTheme()
   height: 95%;
   border-radius: 10px;
   flex-grow: 1;
-  background-image: url('@/assets/image.png');
+  background-image: url('@/assets/image11.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
 }
 
 #zhuYe,
 #jingLi,
 #xiangMu,
 #jiNeng,
-#lianXi {
+#lianXi,
+#tuPian {
   width: 90%;
   height: 600px;
   margin-top: 20px;
   margin: 20px auto 2px auto;
 }
 
+#tuPian {
+  padding: 50px 10px;
+  width: 90%;
+  height: 125vh;
+}
+h1 {
+  font-weight: 540;
+  font-size: 3rem;
+  text-align: center;
+  margin : 50px 0;
+}
 #zhuYe {
   display: flex;
   align-content: center;
@@ -151,7 +170,7 @@ const { switchValue, handleSwitchChange } = useTheme()
   line-height: 50px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 1.8rem;
 }
 
 .nav {

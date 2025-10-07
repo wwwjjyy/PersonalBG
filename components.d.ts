@@ -10,6 +10,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
+    MovDiv: typeof import('./src/components/MovDiv.vue')['default']
+    MovDiv2: typeof import('./src/components/MovDiv2.vue')['default']
     Word: typeof import('./src/components/Word.vue')['default']
   }
 }

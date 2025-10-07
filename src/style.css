@@ -45,7 +45,13 @@ a {
   color: #ffffff; /* 白色文字 */
 }
 .zRi.dark{
-  background-image: url(./assets/image1.png);
-  transition: background-color 0.3s ease; /* 平滑过渡 */
+  background-image: url('@/assets/image111.png');;
 
+}
+.zLe.dark{
+  align-items: flex-end;
+}
+#zhuYe.dark{
+  flex-direction: row-reverse;
+  justify-content: flex-start;
 }
