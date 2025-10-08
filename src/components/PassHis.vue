@@ -23,9 +23,9 @@
         <!-- 项目一：文字在左，卡片在右 -->
         <div class="pj1 project-item">
             <div class="project-info">
-                <h2>项目标题一</h2>
+                <h2>个人博客</h2>
                 <p class="description">
-                    这里是关于这个项目的详细介绍。前端使用 React + React Router + CSS 实现动画和交互效果；后端使用 Node.js + Express 处理图片上传功能，利用 IndexedDB 和 LocalStorage实现数据持久化。
+                    xxxxxxxxxxxxxxx
                 </p>
                 <div class="links">
                     <p>项目地址: <a href="https://github.com/xxx" target="_blank">https://github.com/xxx</a></p>
@@ -33,19 +33,19 @@
                 </div>
             </div>
             <div class="project-card">
-                <Cardd />
+                <Cardd1 />
             </div>
         </div>
 
         <!-- 项目二：卡片在左，文字在右 (对应图片中的“支付系统”) -->
         <div class="pj2 project-item">
             <div class="project-card">
-                <Cardd />
+                <Cardd2 />
             </div>
             <div class="project-info">
-                <h2>支付系统</h2>
+                <h2>智能视疲劳守护系统</h2>
                 <p class="description">
-                    提高支付系统安全和支付转化率低的问题。这是一个示例描述，您可以根据实际情况进行修改和填充。
+                    xxxxxxxxxxxx。
                 </p>
                 <div class="links">
                     <p>项目地址: <a href="https://github.com/xxx" target="_blank">https://github.com/xxx</a></p>
@@ -57,7 +57,8 @@
 </template>
 
 <script setup lang='ts'>
-import Cardd from './Cardd.vue';
+import Cardd1 from './Cardd1.vue';
+import Cardd2 from './Cardd2.vue';
 </script>
 
 <style>
@@ -133,7 +134,7 @@ import Cardd from './Cardd.vue';
     margin: 120px auto;   /* 增加每个项目之间的垂直间距 */
     width: 80%;
 }
-
+ 
 /* 项目的左右两个子容器（卡片和信息） */
 .project-item > div {
     flex: 1; /* 让两个子容器平分宽度 */
