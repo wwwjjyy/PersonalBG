@@ -42,7 +42,9 @@
     <PassHis/>
   </div>
   <!-- 个人项目 -->
-  <div id="xiangMu"></div>
+  <div id="xiangMu">
+    
+  </div>
   <!-- 个人技能 -->
   <div id="jiNeng"></div>
   <!-- 联系方式 -->
@@ -107,7 +109,6 @@ const { switchValue, handleSwitchChange } = useTheme()
 #lianXi,
 #tuPian {
   width: 90%;
-  height: 600px;
   margin-top: 20px;
   margin: 20px auto 2px auto;
 }
@@ -174,8 +175,8 @@ h1 {
   line-height: 50px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.8rem;
-}
+  font-size: clamp(1rem, 3vw, 1.8rem);  
+  transition: font-size 0.3s ease;}
 
 .nav {
   display: flex;

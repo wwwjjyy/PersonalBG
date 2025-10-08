@@ -25,11 +25,15 @@
             <div class="project-info">
                 <h2>个人博客</h2>
                 <p class="description">
-                    xxxxxxxxxxxxxxx
+                    利用vite脚手架创建项目，
+                    采用vue3 +css + ts 构建单页面应用。
+                    使用 element-plus,inspira ui 组件库，Flex实现响应式设计，确保跨设备兼容性，
+                    通过 CSS 样式和组件逻辑实现导航跳转，卡片悬停效果，明暗主题切换等
+
                 </p>
                 <div class="links">
-                    <p>项目地址: <a href="https://github.com/xxx" target="_blank">https://github.com/xxx</a></p>
                     <p>访问地址: <a href="https://www.xxx.com" target="_blank">https://www.xxx.com</a></p>
+                    <p>项目地址: <a href="https://github.com/wwwjjyy/PersonalBG" target="_blank">https://github.com/wwwjjyy/PersonalBG</a></p>
                 </div>
             </div>
             <div class="project-card">
@@ -45,11 +49,10 @@
             <div class="project-info">
                 <h2>智能视疲劳守护系统</h2>
                 <p class="description">
-                    xxxxxxxxxxxx。
+                    基于Python+haar的人脸特征检测系统，通过摄像头实时识别面部特征，无人使用时自动关机节能。
                 </p>
                 <div class="links">
-                    <p>项目地址: <a href="https://github.com/xxx" target="_blank">https://github.com/xxx</a></p>
-                    <p>访问地址: <span>---</span></p>
+                    <p>项目地址: <a href="https://github.com/wwwjjyy/FACE" target="_blank">https://github.com/wwwjjyy/FACE</a></p>
                 </div>
             </div>
         </div>
