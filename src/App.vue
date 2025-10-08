@@ -1,13 +1,12 @@
 <template>
   <div class="nav">
-    <a href="" class="nF" @click="tiaoZ($event, 'zhuYe')">
-      <el-icon :size="22">
-        <User />
-      </el-icon> 主页</a>
-
     <div class="cNav">
+      <a href="" class="nF" @click="tiaoZ($event, 'zhuYe')">      
+        <!-- <el-icon :size="22">
+        <User />
+      </el-icon> -->主页 
+    </a>
       <a href="" @click="tiaoZ($event, 'jingLi')">个人经历</a>
-      <a href="" @click="tiaoZ($event, 'xiangMu')">个人项目</a>
       <a href="" @click="tiaoZ($event, 'jiNeng')">个人技能</a>
       <a href="" @click="tiaoZ($event, 'lianXi')">联系方式</a>
     </div>
@@ -41,12 +40,11 @@
   <div id="jingLi">
     <PassHis/>
   </div>
-  <!-- 个人项目 -->
-  <div id="xiangMu">
-    
-  </div>
   <!-- 个人技能 -->
-  <div id="jiNeng"></div>
+  <div id="jiNeng">
+      <h1>个人技能</h1>
+      <ItWall/>
+  </div>
   <!-- 联系方式 -->
   <div id="lianXi"></div>
 
@@ -60,7 +58,7 @@ import useNavscoll from './hooks/useNavscoll';
 import { Sunrise, MoonNight } from '@element-plus/icons-vue'
 import PassHis from './components/PassHis.vue';
 import MovDiv2 from './components/MovDiv2.vue';
-
+import ItWall from './components/ItWall.vue';
 
 const { tiaoZ } = useNavscoll('.nav');
 
@@ -104,7 +102,6 @@ const { switchValue, handleSwitchChange } = useTheme()
 
 #zhuYe,
 #jingLi,
-#xiangMu,
 #jiNeng,
 #lianXi,
 #tuPian {
@@ -156,11 +153,6 @@ h1 {
   gap: 15px;
 }
 
-.nav .nF {
-  position: fixed;
-  left: 0;
-  margin-left: 50px;
-}
 
 .nav #navR {
   display: flex;

@@ -15,6 +15,7 @@ declare module 'vue' {
     CardItem: typeof import('./src/components/ui/card-3d/CardItem.vue')['default']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
+    ItWall: typeof import('./src/components/ItWall.vue')['default']
     MovDiv: typeof import('./src/components/MovDiv.vue')['default']
     MovDiv2: typeof import('./src/components/MovDiv2.vue')['default']
     PassHis: typeof import('./src/components/PassHis.vue')['default']

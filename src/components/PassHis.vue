@@ -67,7 +67,7 @@ import Cardd2 from './Cardd2.vue';
 <style>
 /* ... 您之前的 .ct, .uni 等样式保持不变 ... */
 .ct {
-    padding: 150px 0; /* 调整了上下间距，使其不那么空旷 */
+    padding: 150px 0 20px; /* 调整了上下间距，使其不那么空旷 */
 }
 
 .ct>h1 {
