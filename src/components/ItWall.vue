@@ -16,50 +16,49 @@ import { ref } from 'vue';
 const gridItems = ref([
     {
         id: 1,
-        text: 'Python',
-        // 图标来自 https://www.svgrepo.com/ 或其他图标库
-        image: 'https://www.svgrepo.com/show/374016/python.svg',
+        text: 'Vue3',
+        image: '../src/assets/itsvg/vuejs-original.svg',
     },
     {
         id: 2,
-        text: 'JMeter',
-        image: 'https://jmeter.apache.org/images/jmeter_square.svg',
+        text: 'vite',
+        image: '../src/assets/itsvg/vitejs-original.svg',
     },
     {
         id: 3,
-        text: 'Postman',
-        image: 'https://www.svgrepo.com/show/354202/postman-icon.svg',
+        text: 'ts',
+        image: '../src/assets/itsvg/typescript-original.svg',
     },
     {
         id: 4,
-        text: 'Selenium',
-        image: 'https://www.svgrepo.com/show/374069/selenium.svg',
+        text: 'html',
+        image: '../src/assets/itsvg/html5-original.svg',
     },
     {
         id: 5,
-        text: '功能测试',
-        image: 'https://www.svgrepo.com/show/443210/testing.svg',
+        text: 'css',
+        image: '../src/assets/itsvg/css3-original.svg',
     },
     {
         id: 6,
-        text: '自动化测试',
-        image: 'https://www.svgrepo.com/show/404958/briefcase-check.svg',
+        text: 'js',
+        image: '../src/assets/itsvg/javascript-original.svg',
     },
     {
         id: 7,
         text: 'Git',
-        image: 'https://www.svgrepo.com/show/373623/git.svg',
+        image: '../src/assets/itsvg/git-original.svg',
     },
     {
         id: 8,
-        text: 'MySQL',
-        image: 'https://www.svgrepo.com/show/373848/mysql.svg',
+        text: 'python',
+        image: '../src/assets/itsvg/python-original.svg',
     },
     {
         id: 9,
-        text: 'Linux',
-        image: 'https://www.svgrepo.com/show/373758/linux.svg',
-    },
+        text: 'axios',
+        image: '../src/assets/itsvg/axios-plain.svg',
+    }
 ]);
 </script>
 
@@ -95,7 +94,7 @@ const gridItems = ref([
     /* 阴影效果 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     /* 过渡效果，让悬停动画更平滑 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
     cursor: pointer;
     height: 300px;
     /* 固定高度，让格子更整齐 */
@@ -109,6 +108,8 @@ const gridItems = ref([
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     /* 背景变色，模仿图片中的选中效果 */
     background-color: #000000;
+    border: #ffffff 3px solid;
+    
     
 }
 .grid-item:hover .grid-item-text {
