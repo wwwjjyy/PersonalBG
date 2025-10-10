@@ -1,7 +1,7 @@
 <template>        
     <div class="grid-container">
         <!-- 使用 v-for 循环遍历 gridItems 数组来生成格子 -->
-        <div v-for="item in gridItems" :key="item.id" class="grid-item">
+        <div v-for="item in gridItems" :key="item.id" class="grid-item ">
             <img :src="item.image" :alt="item.text" class="grid-item-icon" />
             <p class="grid-item-text">{{ item.text }}</p>
         </div>
@@ -11,8 +11,6 @@
 <script setup>
 import { ref } from 'vue';
 
-// 使用 ref 创建一个响应式数组来存储格子数据
-// 您可以轻松地在这里添加、删除或修改项目
 const gridItems = ref([
     {
         id: 1,
@@ -107,10 +105,16 @@ const gridItems = ref([
     /* 阴影加深 */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     /* 背景变色，模仿图片中的选中效果 */
+    background-color: #000000;    
+}
+.grid-item.dark{
+    border: 3px solid white;
+    background-color: #e4e4e4;
+}
+.grid-item.dark:hover{
     background-color: #000000;
-    border: #ffffff 3px solid;
-    
-    
+    border: 3px solid white;
+
 }
 .grid-item:hover .grid-item-text {
   color: #ffffff;

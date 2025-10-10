@@ -8,17 +8,21 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AiTall: typeof import('./src/components/AiTall.vue')['default']
     CardBody: typeof import('./src/components/ui/card-3d/CardBody.vue')['default']
     CardContainer: typeof import('./src/components/ui/card-3d/CardContainer.vue')['default']
     Cardd1: typeof import('./src/components/Cardd1.vue')['default']
     Cardd2: typeof import('./src/components/Cardd2.vue')['default']
     CardItem: typeof import('./src/components/ui/card-3d/CardItem.vue')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
     ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
-    ItWall: typeof import('./src/components/ItWall.vue')['default']
+    ItWallp: typeof import('./src/components/ItWallp.vue')['default']
     MovDiv: typeof import('./src/components/MovDiv.vue')['default']
     MovDiv2: typeof import('./src/components/MovDiv2.vue')['default']
     PassHis: typeof import('./src/components/PassHis.vue')['default']
+    Tcon: typeof import('./src/components/Tcon.vue')['default']
     Word: typeof import('./src/components/Word.vue')['default']
   }
 }

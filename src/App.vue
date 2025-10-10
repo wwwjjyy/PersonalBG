@@ -43,10 +43,13 @@
   <!-- 个人技能 -->
   <div id="jiNeng">
       <h1>个人技能</h1>
-      <ItWall/>
+      <ItWallp/>
   </div>
   <!-- 联系方式 -->
-  <div id="lianXi"></div>
+  <div id="lianXi">
+    <AiTall/>
+
+  </div>
 
 
 </template>
@@ -58,7 +61,10 @@ import useNavscoll from './hooks/useNavscoll';
 import { Sunrise, MoonNight } from '@element-plus/icons-vue'
 import PassHis from './components/PassHis.vue';
 import MovDiv2 from './components/MovDiv2.vue';
-import ItWall from './components/ItWall.vue';
+import ItWallp from './components/ItWallp.vue';
+import AiTall from './components/AiTall.vue';
+import Tcon from './components/Tcon.vue';
+
 
 const { tiaoZ } = useNavscoll('.nav');
 

@@ -25,6 +25,9 @@ export default function () {
     const zR=document.querySelector('.zRi') as HTMLElement;
     const zL=document.querySelector('.zLe') as HTMLElement;
     const zy=document.querySelector('#zhuYe') as HTMLElement;
+    const gi=document.querySelectorAll('.grid-item ') as NodeListOf<HTMLElement>;
+
+
     
     if (isDark) {
       html.classList.add('dark')
@@ -32,6 +35,10 @@ export default function () {
       zR?.classList.add('dark');
       zL?.classList.add('dark');
       zy?.classList.add('dark');
+      gi.forEach((el)=>{
+        el.classList.add('dark');
+      })
+      //gi?.classList.add('dark');
       
       
       localStorage.setItem('theme', 'dark')
@@ -41,6 +48,9 @@ export default function () {
       zR?.classList.remove('dark');
       zL?.classList.remove('dark');
       zy?.classList.remove('dark');
+      gi.forEach((el)=>{
+        el.classList.remove('dark');
+      })
       localStorage.setItem('theme', 'light')
     }
   }
