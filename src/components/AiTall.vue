@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="faArea">
-            <input v-model="message" class="ist" type="textarea" placeholder="和AI交流交流？？？..." />
+            <input v-model="message" class="ist"   placeholder="和AI交流交流？？？..."@keyup.enter="getL" />
             <button @click="getL" round style="flex-grow: 1;
                      border-radius: 12px;
                      background-color: black;

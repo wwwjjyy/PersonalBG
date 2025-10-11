@@ -14,38 +14,32 @@
             </div>
             <div class="contact-icons">
                 <!-- 邮箱图标 -->
-                <button class="icon-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-svg">
-                        <path d="M2.25 9.75h19.5v9.75H2.25v-9.75z" />
-                        <path d="M2.25 3.75a3 3 0 013-3h13.5a3 3 0 013 3v5.25h-19.5V3.75z" />
-                    </svg>
-                </button>
-                <!-- 电话图标 -->
-                <button class="icon-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-svg">
-                        <path d="M1.5 5.25a3 3 0 013-3h13.5a3 3 0 013 3v8.25a3 3 0 01-3 3h-13.5a3 3 0 01-3-3v-8.25z" />
-                        <path d="M7.5 15.75a.75.75 0 000 1.5h9a.75.75 0 000-1.5h-9z" />
-                        <path d="M16.5 12a.75.75 0 00.75-.75v-3a.75.75 0 00-1.5 0v3a.75.75 0 00.75.75z" />
-                    </svg>
-                </button>
+                <a href="https://wx.mail.qq.com/">
+                    <button class="icon-btn">
+                        <img src="../assets/lx/mail.svg" alt="" class="icon-svg">
+                    </button>
+                </a>
+                <a href="weixin://wxid/jy1847595">
+
+                    <button class="icon-btn">
+                        <img src="../assets/lx/wx.svg" alt="" class="icon-svg">
+                    </button>
+                </a>
                 <!-- GitHub图标 -->
                 <a href="https://github.com/wwwjjyy">
                     <button class="icon-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="icon-svg">
-                            <path
-                                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-3 10.5a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0-3.75a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0-3.75a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6z" />
-                        </svg>
+                        <img src="../assets/lx/github.svg" alt="" class="icon-svg">
+
                     </button>
                 </a>
                 <!-- Gitee图标 -->
-                <button class="icon-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-svg">
-                        <path
-                            d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3h18a3 3 0 00-3-3v-3A5.25 5.25 0 0012 1.5zm0 13.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm0-6a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" />
-                    </svg>
-                </button>
-            </div>  
+                <a href="https://gitee.com/yiersna">
+                    <button class="icon-btn">
+                        <img src="../assets/lx/gitee.svg" alt="" class="icon-svg">
+
+                    </button>
+                </a>
+            </div>
             <p style="text-align: center;color: #8c8c8c;">(如果无聊，你还可以跟AI联系联系------>)</p>
         </div>
         <!-- 右边 -->
@@ -139,15 +133,28 @@ import AiTall from './AiTall.vue';
     color: white;
 }
 
+.icon-btn:hover .icon-svg {
+    filter: invert(100%);
+}
+
 .icon-btn.dark {
     background-color: black;
     color: white;
+}
+
+.icon-btn.dark .icon-svg {
+    filter: invert(100%);
 }
 
 .icon-btn:hover.dark {
     background-color: white;
     color: black;
     border: white;
+}
+
+.icon-btn:hover.dark .icon-svg {
+    filter: invert(0);
+
 }
 
 .icon-svg {

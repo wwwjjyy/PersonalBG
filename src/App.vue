@@ -26,8 +26,8 @@
   <div id="zhuYe">
     <div class="zLe">
 
-      <Word :text="'H ELLO！ ' " :speed="10"/>
-      <Word :text="'   很高兴你能驻足我的个人小站！这里记录着我的教育历程、掌握的技能，还有那些亲手打磨过的项目故事。不妨多留片刻逛逛，这份始终未减的热忱与未完待续的探索，一直在这里等你发现。'" 
+      <Word class="z1" :text="'HELLO！ ' " :speed="10"/>
+      <Word class="z2" :text="'很高兴你能驻足我的个人小站！这里记录着我的教育历程，掌握的技能，还有那些亲手打磨过的项目故事。不妨多留片刻逛逛，这份始终未减的热忱与未完待续的探索，一直在这里等你发现。'" 
       :speed="20"
       />
     </div>
@@ -64,7 +64,7 @@ import useNavscoll from './hooks/useNavscoll';
 import { Sunrise, MoonNight } from '@element-plus/icons-vue'
 import PassHis from './components/PassHis.vue';
 import MovDiv2 from './components/MovDiv2.vue';
-import ItWallp from './components/ItWallp.vue';
+import ItWallp from './components/ItWallp.vue' ;
 import Tcon from './components/Tcon.vue';
 
 
@@ -87,14 +87,15 @@ const { switchValue, handleSwitchChange } = useTheme()
   flex-grow: 1;
   flex: 0 0 40%; 
   padding-right: 3rem;
+  line-height: 1.6;
 }
-.zLe :first-child{
-  font-size: clamp(2rem, 5vw, 3.7rem); /* 响应式字体：最小2rem，最大3.5rem，基于视口宽度5vw */
+.z1{
+  font-size: clamp(2rem, 5vw, 3.7rem); 
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.zLe :nth-child(2){
-  font-size: clamp(1rem, 2vw, 1.5rem); /* 响应式字体：最小1rem，最大1.25rem，基于视口宽度2vw */
+.z2{
+  font-size: clamp(1rem, 2vw, 1.5rem); 
   line-height: 1.6;
 }
 .zRi {
