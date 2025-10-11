@@ -6,7 +6,7 @@
         class="box"   
         :class="{ visible: visibleBoxes[index] }   "
         :style="{
-            backgroundImage: `url(../src/assets/tuPian/tp_${index+1}.jpeg)`,
+            backgroundImage: `url(${box.image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
         }"
@@ -18,7 +18,31 @@
   <script setup lang="ts">
   import { ref, onMounted, onUnmounted } from "vue";
   
-  const boxes = Array(10).fill(null);
+  import tp1 from '@/assets/tuPian/tp_1.jpeg';
+  import tp2 from '@/assets/tuPian/tp_2.jpeg';
+  import tp3 from '@/assets/tuPian/tp_3.jpeg';
+  import tp4 from '@/assets/tuPian/tp_4.jpeg';
+  import tp5 from '@/assets/tuPian/tp_5.jpeg';
+  import tp6 from '@/assets/tuPian/tp_6.jpeg';
+  import tp7 from '@/assets/tuPian/tp_7.jpeg';
+  import tp8 from '@/assets/tuPian/tp_8.jpeg';
+  import tp9 from '@/assets/tuPian/tp_9.jpeg';
+  import tp10 from '@/assets/tuPian/tp_10.jpeg';
+  
+  // 创建包含图片的数组
+  const boxes = [
+    { image: tp1 },
+    { image: tp2 },
+    { image: tp3 },
+    { image: tp4 },
+    { image: tp5 },
+    { image: tp6 },
+    { image: tp7 },
+    { image: tp8 },
+    { image: tp9 },
+    { image: tp10 }
+  ];
+
   const visibleBoxes = ref<boolean[]>(Array(5).fill(false)); 
   const container = ref<HTMLElement | null>(null);
   

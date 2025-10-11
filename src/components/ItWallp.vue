@@ -11,51 +11,61 @@
 <script setup>
 import { ref } from 'vue';
 
+import vueIcon from '@/assets/itsvg/vuejs-original.svg';
+import viteIcon from '@/assets/itsvg/vitejs-original.svg';
+import tsIcon from '@/assets/itsvg/typescript-original.svg';
+import htmlIcon from '@/assets/itsvg/html5-original.svg';
+import cssIcon from '@/assets/itsvg/css3-original.svg';
+import jsIcon from '@/assets/itsvg/javascript-original.svg';
+import gitIcon from '@/assets/itsvg/git-original.svg';
+import pythonIcon from '@/assets/itsvg/python-original.svg';
+import axiosIcon from '@/assets/itsvg/axios-plain.svg';
+
 const gridItems = ref([
     {
         id: 1,
         text: 'Vue3',
-        image: '../src/assets/itsvg/vuejs-original.svg',
+        image: vueIcon,  // 使用导入的图片变量
     },
     {
         id: 2,
         text: 'vite',
-        image: '../src/assets/itsvg/vitejs-original.svg',
+        image: viteIcon,
     },
     {
         id: 3,
         text: 'ts',
-        image: '../src/assets/itsvg/typescript-original.svg',
+        image: tsIcon,
     },
     {
         id: 4,
         text: 'html',
-        image: '../src/assets/itsvg/html5-original.svg',
+        image: htmlIcon,
     },
     {
         id: 5,
         text: 'css',
-        image: '../src/assets/itsvg/css3-original.svg',
+        image: cssIcon,
     },
     {
         id: 6,
         text: 'js',
-        image: '../src/assets/itsvg/javascript-original.svg',
+        image: jsIcon,
     },
     {
         id: 7,
         text: 'Git',
-        image: '../src/assets/itsvg/git-original.svg',
+        image: gitIcon,
     },
     {
         id: 8,
         text: 'python',
-        image: '../src/assets/itsvg/python-original.svg',
+        image: pythonIcon,
     },
     {
         id: 9,
         text: 'axios',
-        image: '../src/assets/itsvg/axios-plain.svg',
+        image: axiosIcon,
     }
 ]);
 </script>
