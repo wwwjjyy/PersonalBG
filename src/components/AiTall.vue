@@ -1,39 +1,42 @@
 <template>
     <div class="allCon">
         <div class="aiT" ref="messageListRef">
-            <div v-for="item in talkListStore.talkList" :key="item.id">
+            <div v-for="item in talkListStore.talkList" :key="item.id" style="margin: 20px 0 ;
+            
+            ">
                 <!-- AI 头像 -->
-                <div v-if="item.role === 'ai'" style="display: flex;width: 80% ;  ">
-                    <span>{{ item.msg }}</span>
+                <div v-if="item.role === 'ai'" style="display: flex;width: 80% ;
+
+                " class="message-item xioaxi">
+                    <span style="line-height: 1.4;">{{ item.msg }}</span>
 
                 </div>
                 <!-- 用户头像 -->
                 <div v-if="item.role === 'user'" style="display: flex;
-          justify-content: flex-end;        
-          ">
+          justify-content: flex-end;" class="message-item">
                     <div style="
                     max-width: 70%;
-                    border-radius: 10px;
-                    background-color: gainsboro;
-                    padding: 2px 10px;
-            ">
-                        <span>{{ item.msg }}</span>
+
+            " class="xioaxi " :class="item.role" >
+                        <span style="line-height: 1.4;">{{ item.msg }}</span>
                     </div>
                 </div>
 
             </div>
         </div>
         <div class="faArea">
-            <el-input v-model="message" 
-            style="flex-grow: 9;
+            <input v-model="message" style="flex-grow: 9;
             font-size: 16px;
-            " 
-             type="textarea" 
-        
-            placeholder="请输入内容..."
-            :autosize="{ maxRows: 5 }"
-                 />
-                 <el-button @click="getL" type="info" round style="flex-grow: 1">点击发送</el-button>
+            border: 3px solid #030303;
+            border-radius: 12px;
+            padding: 10px;
+            " type="textarea" placeholder="请输入内容..." />
+            <button @click="getL" round style="flex-grow: 1;
+                     border-radius: 12px;
+                     background-color: black;
+                        color: white;
+                     padding: 12px;
+                 ">点击发送</button>
         </div>
     </div>
 </template>
@@ -84,28 +87,65 @@ async function getL() {
 </script>
 
 <style>
+.allCon {
+    height: 680px;
+    padding-bottom: 20px;
+    width: 86%;
+    overflow-y: clip;
+    margin: 5px auto;
+
+}
+
 .faArea {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 10px;
-    height: 20%;
-}   
-.allCon {
-    height: 400px;
-    width: 40%;
-    overflow-y: hidden;
-    padding: 10px;
-    margin-bottom: 10px;
+    height: 10%;
+
+    padding: 0 10px;
 
 }
 
 .aiT {
-    height: 80%;
+    height: 85%;
     overflow-y: auto;
+    margin: 10px 0;
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+}
+
+.aiT::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Edge/Safari */
+}
+
+.aiT {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge 旧版 */
+}
+
+.message-item {
+    word-wrap: break-word;
+    /* 允许长单词或URL换行 */
+    word-break: break-all;
+    /* 在任何字符处换行，确保不会溢出容器 */
+}
+
+.xioaxi {
+    border: 3px solid #1d1d1d;
+    border-radius: 12px;
+    padding: 8px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.xioaxi.user.dark{
+    background-color: #1a2a34;
+    border: #1a2a34 solid 3px;
 }
 </style>

@@ -47,7 +47,8 @@
   </div>
   <!-- 联系方式 -->
   <div id="lianXi">
-    <AiTall/>
+    <h1>联系方式</h1>
+    <Tcon/>
 
   </div>
 
@@ -62,7 +63,6 @@ import { Sunrise, MoonNight } from '@element-plus/icons-vue'
 import PassHis from './components/PassHis.vue';
 import MovDiv2 from './components/MovDiv2.vue';
 import ItWallp from './components/ItWallp.vue';
-import AiTall from './components/AiTall.vue';
 import Tcon from './components/Tcon.vue';
 
 
@@ -115,7 +115,10 @@ const { switchValue, handleSwitchChange } = useTheme()
   margin-top: 20px;
   margin: 20px auto 2px auto;
 }
+#lianXi{
+  margin-top: 150PX;
 
+}
 #tuPian {
   padding: 50px 10px;
   width: 90%;
