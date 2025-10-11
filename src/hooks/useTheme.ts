@@ -27,6 +27,7 @@ export default function () {
     const zy=document.querySelector('#zhuYe') as HTMLElement;
     const gi=document.querySelectorAll('.grid-item ') as NodeListOf<HTMLElement>;
     const xx=document.querySelectorAll('.xioaxi.user') as NodeListOf<HTMLElement>;
+    const ab=document.querySelectorAll('.icon-btn') as NodeListOf<HTMLElement>;
 
 
     
@@ -40,6 +41,9 @@ export default function () {
         el.classList.add('dark');
       })     
       xx?.forEach((el)=>{
+        el.classList.add('dark');
+      })
+      ab?.forEach((el)=>{
         el.classList.add('dark');
       })
       //gi?.classList.add('dark');
@@ -56,6 +60,9 @@ export default function () {
         el.classList.remove('dark');
       })
       xx.forEach((el)=>{
+        el.classList.remove('dark');
+      })
+      ab.forEach((el)=>{
         el.classList.remove('dark');
       })
       localStorage.setItem('theme', 'light')

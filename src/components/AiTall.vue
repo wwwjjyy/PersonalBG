@@ -8,7 +8,13 @@
                 <div v-if="item.role === 'ai'" style="display: flex;width: 80% ;
 
                 " class="message-item xioaxi">
-                    <span style="line-height: 1.4;">{{ item.msg }}</span>
+                    <span style="line-height: 1.4;">
+                        <Word :text=item.msg        
+                        :speed="20"
+                        />
+                        <!-- <span style="line-height: 1.4;">{{ item.msg }}</span> -->
+
+                    </span>
 
                 </div>
                 <!-- 用户头像 -->
@@ -16,8 +22,7 @@
           justify-content: flex-end;" class="message-item">
                     <div style="
                     max-width: 70%;
-
-            " class="xioaxi " :class="item.role" >
+            " class="xioaxi " :class="[item.role, switchValue ? 'dark' : '']">
                         <span style="line-height: 1.4;">{{ item.msg }}</span>
                     </div>
                 </div>
@@ -25,12 +30,7 @@
             </div>
         </div>
         <div class="faArea">
-            <input v-model="message" style="flex-grow: 9;
-            font-size: 16px;
-            border: 3px solid #030303;
-            border-radius: 12px;
-            padding: 10px;
-            " type="textarea" placeholder="请输入内容..." />
+            <input v-model="message" class="ist" type="textarea" placeholder="和AI交流交流？？？..." />
             <button @click="getL" round style="flex-grow: 1;
                      border-radius: 12px;
                      background-color: black;
@@ -46,6 +46,12 @@ import { ref, watch, nextTick } from 'vue';
 import axios from 'axios';
 import { nanoid } from 'nanoid';
 import { useTalkListStore, type Talk } from '@/store/aiTall';
+import useTheme from '@/hooks/useTheme';
+import Word from '@/components/Word.vue';
+
+
+const { switchValue } = useTheme()
+
 
 const messageListRef = ref<HTMLDivElement | null>(null);
 
@@ -144,8 +150,18 @@ async function getL() {
     letter-spacing: 1px;
     font-size: 18px;
 }
-.xioaxi.user.dark{
+
+.xioaxi.user.dark {
     background-color: #1a2a34;
     border: #1a2a34 solid 3px;
+}
+
+.ist {
+    flex-grow: 9;
+    font-size: 16px;
+    border: 3px solid #030303;
+    border-radius: 12px;
+    padding: 10px;
+
 }
 </style>

@@ -26,8 +26,9 @@
                 <h2>个人博客</h2>
                 <p class="description">
                     利用vite脚手架创建项目，
-                    采用vue3 +css + ts 构建单页面应用。
+                    采用vue3 +css + ts + pinia + axios 构建单页面应用。
                     使用 element-plus,inspira ui 组件库，Flex实现响应式设计，确保跨设备兼容性，
+                    pinia + axios实现ai交流对话，
                     通过 CSS 样式和组件逻辑实现导航跳转，卡片悬停效果，明暗主题切换等
 
                 </p>
