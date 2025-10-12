@@ -162,4 +162,58 @@ import AiTall from './AiTall.vue';
     /* 图标本身尺寸 */
     height: 24px;
 }
+@media (max-width: 768px) {
+    .tcvt {
+        flex-direction: column; /* 从横向布局改为纵向布局，避免左右挤压 */
+        gap: 2rem; /* 增加上下间距，提升可读性 */
+    }
+
+    .ltc, .rtc {
+        width: 100%; /* 单个组件占满屏幕宽度，避免留白 */
+    }
+
+    .contact-info {
+        font-size: 1rem; /* 缩小字体，避免文字溢出 */
+        gap: 1rem 0.8rem; /* 减小行列间距，适配小屏幕 */
+        justify-content: flex-start; /* 左对齐，避免内容偏右 */
+        padding: 0 1rem; /* 增加左右内边距，避免贴边 */
+    }
+
+    .contact-icons {
+        gap: 1.2rem; /* 减小图标间距，避免一行放不下 */
+    }
+
+    .icon-btn {
+        width: 55px; /* 缩小图标按钮尺寸，适配手机屏幕 */
+        height: 55px;
+        border-width: 3px; /* 同步缩小边框，保持视觉比例 */
+    }
+
+    .icon-svg {
+        width: 20px; /* 缩小图标，与按钮尺寸匹配 */
+        height: 20px;
+    }
+
+    .tips {
+        font-size: 0.9rem; /* 缩小提示文字，避免换行混乱 */
+        padding: 0 1rem; /* 增加内边距，优化显示 */
+    }
+}
+
+/* 小屏手机适配（可选）：针对宽度≤375px的设备（如iPhone SE、小屏安卓） */
+@media (max-width: 375px) {
+    .contact-info {
+        font-size: 0.9rem; /* 进一步缩小字体 */
+        gap: 0.8rem 0.6rem;
+    }
+
+    .icon-btn {
+        width: 48px; /* 进一步缩小按钮 */
+        height: 48px;
+    }
+
+    .tips {
+        font-size: 0.8rem;
+    }
+}
 </style>
