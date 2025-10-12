@@ -174,4 +174,32 @@ import Cardd2 from './Cardd2.vue';
     color: #2a6db9;
     text-decoration: underline;
 }
+@media (max-width: 1000px) {
+    .ct {
+        padding: 100px 0 20px;
+    }
+    
+    .ct>h1 {
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+    }
+    
+    .uni, .project-item {
+        gap: 30px; /* 减小间距 */
+        margin: 60px auto;
+    }
+    
+    .project-item {
+        flex-direction: column; /* 手机端改为垂直布局 */
+    }
+    
+    /* 反转第二个项目的顺序，保持视觉一致性 */
+    .pj2 {
+        flex-direction: column-reverse;
+    }
+    
+    .uni-right, .uni-left p {
+        font-size: 1rem;
+    }
+}
 </style>
