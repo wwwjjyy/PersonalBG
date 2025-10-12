@@ -69,7 +69,6 @@ talkListStore.$subscribe((mutation, state) => {
 watch(() => talkListStore.talkList.length, async () => {
     await nextTick();
     const listEl = messageListRef.value;
-    console.log(listEl);
     if (listEl) {
         listEl.scrollTo({ top: listEl.scrollHeight, behavior: 'smooth' });
     }

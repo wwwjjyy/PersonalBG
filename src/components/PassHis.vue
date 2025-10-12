@@ -33,7 +33,7 @@
 
                 </p>
                 <div class="links">
-                    <p>访问地址: <a href="https://www.xxx.com" target="_blank">https://www.xxx.com</a></p>
+                    <p>访问地址: <a href="https://hiyuan.xyz/" target="_blank">https://hiyuan.xyz/</a></p>
                     <p>项目地址: <a href="https://github.com/wwwjjyy/PersonalBG" target="_blank">https://github.com/wwwjjyy/PersonalBG</a></p>
                 </div>
             </div>
