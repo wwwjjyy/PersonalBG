@@ -51,7 +51,7 @@
                 <p class="description">
                     使用Vue3 + js 搭建多页面项目，利用组件化开发实现页面模块划分，
                     通过Vue Router实现页面路由导航，利用插槽呈现同格式不同内容，
-                    采用Axios与后端API交互，动态获取数据并呈现在页面上，
+                    采用Axios与API交互，设置本地代理解决跨域，动态获取数据并呈现在页面上，
                     并通过css和element-plus呈现多种鼠标悬停效果和轮播图
                 </p>
                 <div class="links">
