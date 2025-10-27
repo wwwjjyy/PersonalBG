@@ -1,18 +1,20 @@
 <template>
-    <div class="container" ref="container">
-      <div
-        v-for="(box, index) in boxes"
-        :key="index"
-        class="box"   
-        :class="{ visible: visibleBoxes[index] }   "
-        :style="{
-            backgroundImage: `url(${box.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-        }"
+  <div class="container" ref="container">
+    <div
+      v-for="(box, index) in boxes"
+      :key="index"
+      class="box"   
+      :class="{ visible: visibleBoxes[index] }"
+      v-lazy-load="() => loadImage(box, index)"
+    >
+      <img 
+        v-if="box.loaded"
+        :src="box.image" 
+        :alt="`Image ${index}`"
+        class="box-img"
       >
-      </div>
     </div>
+  </div>
   </template>
   
   <script setup lang="ts">
@@ -30,19 +32,23 @@
   import tp10 from '@/assets/tuPian/tp_10.jpeg';
   
   // 创建包含图片的数组
-  const boxes = [
-    { image: tp1 },
-    { image: tp2 },
-    { image: tp3 },
-    { image: tp4 },
-    { image: tp5 },
-    { image: tp6 },
-    { image: tp7 },
-    { image: tp8 },
-    { image: tp9 },
-    { image: tp10 }
-  ];
-
+  const boxes = ref([
+    { image: tp1, loaded: false },
+    { image: tp2, loaded: false },
+    { image: tp3, loaded: false },
+    { image: tp4, loaded: false },
+    { image: tp5, loaded: false },
+    { image: tp6, loaded: false },
+    { image: tp7, loaded: false },
+    { image: tp8, loaded: false },
+    { image: tp9, loaded: false },
+    { image: tp10, loaded: false }
+  ]);
+  const loadImage = (box: any, index: number) => {
+  if (boxes.value && boxes.value[index]) {
+    boxes.value[index].loaded = true;
+  }
+}
   const visibleBoxes = ref<boolean[]>(Array(5).fill(false)); 
   const container = ref<HTMLElement | null>(null);
   
@@ -59,8 +65,8 @@
     );
   
     // 根据滚动进度设置每个盒子的可见状态
-    const boxHeight = containerHeight / boxes.length;
-    boxes.forEach((_, index) => {
+    const boxHeight = containerHeight / boxes.value.length;
+    boxes.value.forEach((_, index) => {
         if(index<5){
             visibleBoxes.value[index] = scrollProgress >= boxHeight *  index;
         }else{
@@ -102,6 +108,7 @@
   z-index: 1;
   transform: translateY(50px);
   box-shadow:   5px 12px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   transition:
     opacity 0.5s ease,
     transform 0.5s ease,
