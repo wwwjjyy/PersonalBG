@@ -18,7 +18,6 @@ declare module 'vue' {
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ItWallp: typeof import('./src/components/ItWallp.vue')['default']
-    MovDiv: typeof import('./src/components/MovDiv.vue')['default']
     MovDiv2: typeof import('./src/components/MovDiv2.vue')['default']
     PassHis: typeof import('./src/components/PassHis.vue')['default']
     Tcon: typeof import('./src/components/Tcon.vue')['default']

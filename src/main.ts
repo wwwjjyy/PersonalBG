@@ -3,6 +3,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './style.css' 
 import { createPinia } from 'pinia'
+import lazyLoad from './directives/lazyLoad'
+
 
 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
@@ -13,4 +15,5 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 const pinia=createPinia()
 app.use(pinia)
+app.directive('lazy-load', lazyLoad)
 app.mount('#app')

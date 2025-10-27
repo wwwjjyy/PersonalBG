@@ -33,24 +33,39 @@
     <div class="zRi"></div>
 
   </div>
-  <div id="tuPian">
+  <div 
+    id="tuPian" 
+    v-lazy-load="loadTuPian"
+    style="opacity: 0; transition: opacity 0.5s ease-out"
+  >
     <h1>瞬间</h1>
-    <MovDiv2 />
+    <MovDiv2 v-if="tuPianLoaded" />
   </div>
   <!-- 个人经历 -->
-  <div id="jingLi">
-    <PassHis />
+  <div 
+    id="jingLi" 
+    v-lazy-load="loadJingLi"
+    style="opacity: 0; transition: opacity 0.5s ease-out"
+  >
+    <PassHis v-if="jingLiLoaded" />
   </div>
   <!-- 个人技能 -->
-  <div id="jiNeng">
+  <div 
+    id="jiNeng" 
+    v-lazy-load="loadJiNeng"
+    style="opacity: 0; transition: opacity 0.5s ease-out"
+  >
     <h1>个人技能</h1>
-    <ItWallp />
+    <ItWallp v-if="jiNengLoaded" />
   </div>
   <!-- 联系方式 -->
-  <div id="lianXi">
+  <div 
+    id="lianXi" 
+    v-lazy-load="loadLianXi"
+    style="opacity: 0; transition: opacity 0.5s ease-out"
+  >
     <h1>联系方式</h1>
-    <Tcon />
-
+    <Tcon v-if="lianXiLoaded" />
   </div>
 
 
@@ -65,7 +80,32 @@ import PassHis from './components/PassHis.vue';
 import MovDiv2 from './components/MovDiv2.vue';
 import ItWallp from './components/ItWallp.vue';
 import Tcon from './components/Tcon.vue';
+import { ref } from 'vue'
 
+const tuPianLoaded = ref(false);
+const jingLiLoaded = ref(false);
+const jiNengLoaded = ref(false);
+const lianXiLoaded = ref(false);
+
+const loadTuPian = () => {
+  tuPianLoaded.value = true;
+  document.getElementById('tuPian')?.style.setProperty('opacity', '1');
+};
+
+const loadJingLi = () => {
+  jingLiLoaded.value = true;
+  document.getElementById('jingLi')?.style.setProperty('opacity', '1');
+};
+
+const loadJiNeng = () => {
+  jiNengLoaded.value = true;
+  document.getElementById('jiNeng')?.style.setProperty('opacity', '1');
+};
+
+const loadLianXi = () => {
+  lianXiLoaded.value = true;
+  document.getElementById('lianXi')?.style.setProperty('opacity', '1');
+};
 
 const { tiaoZ } = useNavscoll('.nav');
 
