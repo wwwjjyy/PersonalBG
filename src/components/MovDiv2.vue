@@ -114,7 +114,14 @@
     transform 0.5s ease,
     filter 0.5s ease;
 }
-
+.box-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .box.visible {
   opacity: 1;
   transform: translateY(0);
