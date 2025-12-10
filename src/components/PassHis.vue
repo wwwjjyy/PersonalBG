@@ -44,8 +44,27 @@
 
         <div class="pj2 project-item">
             <div class="project-card">
-                <Cardd3 />
+                <Cardd4 />
             </div>
+            <div class="project-info">
+                <h2>商城购物小程序</h2>
+                <p class="description">
+                    利用 HBuilderX 创建项目， 采用 Vue3 + SCSS + Pinia 构建跨端小程序应用。 
+                    使用 Uniapp 原生组件，Grid/Flex 布局配合 rpx 实现响应式设计，确保多端屏幕适配，
+                     Pinia 实现购物车状态管理及首页与分类页的精准联动， 
+                     通过 CSS 样式与组件逻辑实现侧边栏切换、瀑布流排版及流畅的购物交互体验。
+                </p>
+                <div class="links">
+                    <p>项目地址: <a href="https://gitcode.com/wwwjjyy/scheng"
+                            target="_blank">https://gitcode.com/wwwjjyy/scheng</a></p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="pj1 project-item">
+
             <div class="project-info">
                 <h2>仿网易严选购物页面</h2>
                 <p class="description">
@@ -59,8 +78,14 @@
                             target="_blank">https://github.com/wwwjjyy/shop</a></p>
                 </div>
             </div>
+            <div class="project-card">
+                <Cardd3 />
+            </div>
         </div>
-        <div class="pj1 project-item">
+        <div class="pj2 project-item">
+            <div class="project-card">
+                <Cardd2 />
+            </div>
             <div class="project-info">
                 <h2>智能视疲劳守护系统</h2>
                 <p class="description">
@@ -71,9 +96,7 @@
                             target="_blank">https://github.com/wwwjjyy/FACE</a></p>
                 </div>
             </div>
-            <div class="project-card">
-                <Cardd2 />
-            </div>
+
         </div>
 
     </div>
@@ -83,6 +106,7 @@
 import Cardd1 from './Cardd1.vue';
 import Cardd2 from './Cardd2.vue';
 import Cardd3 from './Cardd3.vue';
+import Cardd4 from './Cardd4.vue';
 </script>
 
 <style>

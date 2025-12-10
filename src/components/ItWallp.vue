@@ -18,7 +18,7 @@ import htmlIcon from '@/assets/itsvg/html5-original.svg';
 import cssIcon from '@/assets/itsvg/css3-original.svg';
 import jsIcon from '@/assets/itsvg/javascript-original.svg';
 import gitIcon from '@/assets/itsvg/git-original.svg';
-import pythonIcon from '@/assets/itsvg/python-original.svg';
+import uniappIcon from '@/assets/itsvg/uniapp.svg';
 import axiosIcon from '@/assets/itsvg/axios-plain.svg';
 
 const gridItems = ref([
@@ -39,29 +39,30 @@ const gridItems = ref([
     },
     {
         id: 4,
+        text: 'uniapp',
+        image: uniappIcon,
+    },
+    {
+        id: 5,
         text: 'html',
         image: htmlIcon,
     },
     {
-        id: 5,
+        id: 6,
         text: 'css',
         image: cssIcon,
     },
     {
-        id: 6,
+        id:7,
         text: 'js',
         image: jsIcon,
     },
     {
-        id: 7,
+        id: 8,
         text: 'Git',
         image: gitIcon,
     },
-    {
-        id: 8,
-        text: 'python',
-        image: pythonIcon,
-    },
+
     {
         id: 9,
         text: 'axios',
